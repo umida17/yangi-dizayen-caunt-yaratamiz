@@ -1,8 +1,9 @@
 
 
 import React from 'react';
-import Counter from './Counter';
-import InfoCard from './InfoCard';
+
+import Counter from './Counter.jsx';
+import InfoCard from './InfoCard.jsx';
 import './App.css';
 
 function App() {
