@@ -1,52 +1,55 @@
-.dashboard-grid {
+
+
+.dashboard-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "header header header"
-    "stats stats stats"
-    "counter counter logs"
-    "controls controls logs";
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  padding: 20px;
-  height: 100vh;
-  background: #f4f7fe;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.section {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e2e8f0;
-}
-
- 
-.header { 
-  grid-area: header;
- }
-
-.stats { 
-  grid-area: stats;
-   display: flex; 
-   justify-content: space-around;
-   }
-
-.counter-box { 
-  grid-area: counter; 
+.panel {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #eaeaea;
   display: flex;
-   flex-direction: column;
-    align-items: center;
-   }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-.logs {
-   grid-area: logs; 
-   overflow-y: auto;
-   }
+ .panel:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+  border-color: #6366f1;
+}
 
-.controls {
-   grid-area: controls;
-    display: flex;
-     gap: 10px; 
-    }
-    
+.counter-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #6366f1;
+  margin: 20px 0;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
